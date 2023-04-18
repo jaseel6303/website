@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+{% load crispy_forms_tags %}
+
+
+{% block title %}Booking{% endblock %}
+
+
+{% block content%}
+
+<section class="mt-auto" style="padding-top: 6em; background-color: #F9E0D9">
+    <div class="container">
+        <div class="row mt-auto p-3">
+            <h1 class="text-center" style="font-family: 'Titillium Web';">Make An Appoinment</h1>
+        </div>
+    </div>
+</section>
+
+<section style="background-color: #F9E0D9;">
+    <div class="container col-10 col-md-8 col-lg-10 text-center p-3    w-50" >
+        <div class="text-center  " style="background-color: #754F5B; border-radius: 25px;">
+            <div class="container text-white pt-2 ">
+                <form action="" method="POST">
+                    {% csrf_token %}
+                    {{form|crispy}}
+                    <br>
+                    <button class="btn  mb-4" style="background-color: #F9E0D9;" type="submit">Submit</button>   
+                </form>
+            </div>
+        </div>   
+    </div>
+</section>
+{% endblock %}

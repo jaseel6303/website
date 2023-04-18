@@ -1,0 +1,64 @@
+{% extends 'base.html' %}
+
+{% block title%}
+ Home
+{% endblock %}
+
+{% block content %}
+
+{% load static %}
+<section class="mt-auto" style="padding-top: 5em; background-color: #F9E0D9;">
+  <div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel">
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
+      <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" aria-label="Slide 3"></button>
+      <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="3" aria-label="Slide 4"></button>
+    </div>
+    <div class="carousel-inner">
+      <div class="carousel-item active" data-bs-interval="10000">
+        <img src="{% static '/images/hp_1.jpg'%}" class="d-block w-100" alt="...">
+      </div>
+      <div class="carousel-item" data-bs-interval="2000">
+        <img src="{% static '/images/hp_2.jpg'%}" class="d-block w-100" alt="...">
+        
+      </div>
+      <div class="carousel-item" data-bs-interval="2000">
+        <img src="{% static '/images/hp_3.jpg'%}" class="d-block w-100" alt="...">
+        
+      </div>
+      <div class="carousel-item">
+        <img src="{% static '/images/hp_4.jpg'%}" class="d-block w-100" alt="...">
+        
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div><br><br>
+</section>
+
+<section style="background-color: #F9E0D9;">
+
+  <div>
+    <h1 class="text-center" style="font-family: 'Titillium Web';">Welcome to Our Hospital!</h1>
+  </div><br>
+
+  <div class="container">
+    <p style="font-family: 'sans-serif'; font-size: 20px; ">At Our Hospital, we are dedicated to providing exceptional healthcare services to our community. As a leading medical institution, we strive to offer the highest standard of care and compassion to our patients. Our state-of-the-art facilities, cutting-edge technology, and team of skilled healthcare professionals ensure that you receive the best possible treatment for your health needs.</p>
+  </div>
+
+  <div class="container">
+    <p class="text-center" style="font-family: 'sans-serif'; font-size: 20px;">Our Home Page serves as your gateway to accessing important information about our hospital and its services. Here, you can find detailed information about our medical specialties, including cardiology, oncology, pediatrics, obstetrics and gynecology, orthopedics, and more. You can also learn about our team of experienced physicians, nurses, and support staff who are committed to providing personalized care and making your experience with us as comfortable as possible.</p>
+  </div>
+
+  <div class="container">
+    <p class="text-center" style="font-family: 'sans-serif'; font-size: 20px; ">As you browse through our Home Page, you will also find valuable resources such as patient testimonials, health education materials, and information about our advanced medical technologies and facilities. Our goal is to empower you with the knowledge you need to make informed decisions about your healthcare.</p>
+  </div>
+</section>
+{% endblock %}

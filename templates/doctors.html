@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+
+{% block title %}Doctors{% endblock %}
+
+
+{% block content%}
+
+
+<section class="mt-auto" style="padding-top: 5em;background-color: #F9E0D9;">
+    <div class="container">
+        <div class="row mt-auto p-3">
+            <h1 class="text-center" style="font-family: 'Titillium Web';">Our Doctors</h1>
+            <p style="font-family: 'sans-serif'; font-size: 20px; ">We have some of the best specialty doctors from around the world, they bring years of experience and offer evidence based treatment to ensure the best care for you.</p>
+        </div>
+    </div>
+</section>
+
+
+<div class="container text-center " style="background-color: #F9E0D9;">
+    {% for d in doctors %}
+    <div class="card text-center mx-3 my-3" style="width: 18rem; display:inline-block;background-color: #ffb3b3;">
+        <img src="{{d.doc_image.url}}" class="card-img-top" alt="...">
+        <div class="card-body">
+            <h5 class="card-title">Dr. {{d.doc_name}}</h5>
+            <p class="card-text">{{d.doc_spec}}</p>
+            <h6>{{d.dep_name}} Department</h6>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+
+{% endblock %}

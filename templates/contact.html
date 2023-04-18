@@ -1,0 +1,65 @@
+{% extends 'base.html' %}
+{% load crispy_forms_tags %}
+{% block title%}Contact{% endblock %}
+
+{% block content%}
+<h1>Contact Page</h1>
+
+
+
+<section class="mt-4 " style="background-color: #F9E0D9;">
+  <br>
+    <div class="container  text-center col-9 col-lg-6">
+        <form action="" method="POST">
+            {% csrf_token %}
+            {{form|crispy}}
+            <button class="btn btn-primary" type="submit">Submit</button>
+        </form>
+    </div>
+    <div>
+        <h1 style="color: #0a0e54">Frequently Asked Questions</h1>
+    </div><br>
+    <div class="accordion" id="accordionExample">
+        <div class="accordion-item" style="background-color: #F9E0D9;">
+          <h2 class="accordion-header"   id="headingOne">
+            <button class="accordion-button" style="font-family: 'Titillium Web';" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                <h2 style="font-family: 'Titillium Web';font-size: 25px;">As a sports person, how can I manage my frequent sports injuries with orthopedic? </h2>
+            </button>
+          </h2>
+          <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+            <div class="accordion-body" >
+                <p style="font-family: 'sans-serif'; font-size: 18px;">An orthopedic specialist can help create a tailored exercise plan that takes into account the type of sport you are playing and any underlying physical conditions you may have. This plan can help strengthen the muscles and support structures that are most prone to injury, while also helping you to be mindful of any activities that could exacerbate your condition.</p>
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item" style="background-color: #F9E0D9;">
+          <h2 class="accordion-header" id="headingTwo">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+              <h2 style="font-family: 'Titillium Web';font-size: 25px;">How long will it take to recover from my injury or surgery?</h2>
+            </button>
+          </h2>
+          <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+            <div class="accordion-body">
+                <p style="font-family: 'sans-serif'; font-size: 18px;">Recovery time varies depending on the type of injury or surgery. If a patient has a more serious injury, he or she may need a longer period of time to heal. A specialist may also suggest physical therapy to help the patient regain strength and mobility. An orthopedic specialist will be able to provide an estimate of recovery time based on the patient's specific circumstances. What can I do to prevent future injuries or manage my condition? Physical therapy can help strengthen the muscles and tendons around the affected joint, helping to prevent future injuries. Additionally, an orthopedic specialist can help create a tailored exercise plan to strengthen the muscles and help the patient manage their condition. This may also involve lifestyle changes, such as exercise, weight management, and avoiding certain activities.</p>
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item" style="background-color: #F9E0D9;">
+          <h2 class="accordion-header" id="headingThree">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                <h2 style="font-family: 'Titillium Web';font-size: 25px;">What are my treatment options for joint pain? </h2>
+            </button>
+          </h2>
+          <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+            <div class="accordion-body">
+                <p style="font-family: 'sans-serif'; font-size: 18px;">Depending on the cause of the joint pain, the orthopedic specialist may recommend lifestyle changes, such as exercises to reduce inflammation, physical therapy to increase strength and range of motion, medications to reduce pain and swelling, or surgery to repair or replace the joint.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+</section>
+
+
+
+
+{% endblock %}
